@@ -1,0 +1,40 @@
+
+
+nav ul{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap:30px;
+    list-style: none;
+    background-color: var(--nav-bg-color);
+}
+
+.link{
+    padding: 0 30px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.link:hover{
+    background-color: var(--nav-hover-color);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-bg-color);
+    color :var(--header-color)
+}
+
+
+#combat{
+    border: none;
+    background-color: brown;
+    cursor: pointer;
+}
+#combat[disabled]{
+    pointer-events: none;
+    background-color: var(--header-bg-color);
+}

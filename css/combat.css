@@ -1,0 +1,47 @@
+body{
+    background-image: url(../img/arena.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.arena{
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    grid-template-areas: 
+    "joueur1 button joueur2"
+    "log log log";
+    justify-items: center;
+    gap: 20px
+}
+
+th{
+    height:50px;
+}
+
+.joueur1{
+    grid-area: joueur1;
+}
+#start{
+    grid-area: button;
+    height:100px;
+    width:100px;
+    align-self: center;
+    border : none;
+    background-color: var(--start-button-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.joueur2{
+    grid-area: joueur2;
+}
+.divLog{
+    grid-area: log;
+}
+.combatLog{
+    width:400px;
+    height:300px;
+    border:solid 1px;
+    background-color: var(--combat-log-color);
+    overflow-y: scroll;
+}

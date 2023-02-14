@@ -1,0 +1,36 @@
+body{
+    background-image: url(../img/ludi.jpg);
+    background-position: top; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 40px 60px;
+}
+
+
+
+section .carte-selected{
+    border: solid 5px rgb(148, 54, 54);
+}
+
+section .carte-selected .select{
+    background-color: var(--carte-button-hover-color);
+}
+
+.buttons button{
+    border : none;
+    background-color: var(--carte-button-color);
+    border-radius: 10px;
+}
+.buttons button:hover{
+    background-color: var(--carte-button-hover-color);
+}
+.buttons{
+    gap:2px;
+}

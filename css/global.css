@@ -1,0 +1,116 @@
+:root {
+    --creation-carte-background-color: #a17242b6;
+    --creation-carte-button-color: #7d7f7b;
+    --creation-carte-input-color: #9c959b;
+    --creation-carte-selected-color: #88587e;
+    --creation-carte-selected-border-color: #9b859a;
+    --carte-color : #b4b7b0;
+    --carte-header-color : #635950;
+    --stamina-color : white;
+    --stamina-bg-color: grey;
+    --bar-border-color: rgb(202, 202, 202);
+    --start-button-color: rgba(173, 31, 31, 0.795);
+    --combat-log-color : rgba(226, 206, 170, 0.884);
+    --carte-button-color : #7d7f7b;
+    --carte-button-hover-color : #5d5e5c;
+    --nav-bg-color : #7d7f7b;
+    --nav-hover-color:rgba(31, 128, 119, 0.788);
+    --carte-selected-color : #856970;
+    --header-bg-color : #7d7f7b;
+    --header-color : rgb(46, 46, 46);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+body{
+    display: grid;
+    grid-template-areas: "nav""header""main";
+    grid-template-rows: 70px 50px 1fr;
+}
+
+
+.carte{
+    width: 250px;
+    height: 300px;
+    border-radius: 5px;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--carte-color);
+}
+
+
+
+.carte table{
+    width: 100%;
+    height: 100%;
+}
+
+.carte th{
+    background-color: var(--carte-header-color);
+
+}
+.select{
+    width: 50%;
+    height: 50px;
+}
+.supp{
+    width:50%;
+    height: 50px;
+}
+.buttons{
+    display: flex;
+}
+
+.bar{
+    width:99%;
+    border: 1px solid var(--bar-border-color);
+    border-radius: 3px;
+}
+.bar-vie{
+    height: 25px;
+}
+.bar-stamina{
+    height: 10px;
+    background-color: var(--stamina-bg-color);
+}
+.bar-stamina:-moz-meter-optimum::-moz-meter-bar {
+    background:var(--stamina-color);
+}
+.pv{
+    display: block;
+    height: 0;
+}
+.pv::after {
+    content : attr(data-value);
+    top : -1.2rem;
+    left:0.2rem;
+    position:relative;
+    font-size: 0.7rem;
+   }
+.stamina{
+    display: block;
+    height: 0;
+}
+.stamina::after {
+    content : attr(data-value);
+    top : -1.2rem;
+    left:0.2rem;
+    position:relative;
+    font-size: 0.7rem;
+   }
+
